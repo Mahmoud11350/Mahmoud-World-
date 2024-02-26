@@ -1,0 +1,82 @@
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  nav {
+    justify-content: space-between;
+  }
+}
+nav .logo h1 {
+  text-transform: uppercase;
+  color: var(--main-color);
+  letter-spacing: 1.2px;
+  height: 72px;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 767px) {
+  nav .logo h1 {
+    height: 50px;
+  }
+}
+nav .links ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+nav .links ul li {
+  margin-left: 10px;
+}
+nav .links ul li a {
+  text-transform: capitalize;
+  color: var(--alt-color);
+  padding: 0 20px;
+  position: relative;
+  height: 72px;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  nav .links ul li a {
+    font-size: 16px;
+  }
+}
+@media (max-width: 767px) {
+  nav .links ul li a {
+    height: 50px;
+    font-size: 14px;
+    padding: 0 10px;
+  }
+}
+nav .links ul li a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: rgb(238 238 238 /40%);
+}
+nav .links ul li a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background-color: var(--main-color);
+  z-index: 1;
+}
+nav .links ul li a:hover::after,
+nav .links ul li a:hover::before {
+  width: 100%;
+  transition: var(--main-transition);
+}

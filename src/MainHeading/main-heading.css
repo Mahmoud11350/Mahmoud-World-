@@ -1,0 +1,51 @@
+.main-heading {
+  text-align: center;
+}
+.main-heading h2 {
+  position: relative;
+  text-transform: uppercase;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 80px;
+  padding: 15px 30px;
+  border: 2px solid;
+  cursor: pointer;
+  z-index: 1;
+}
+.main-heading h2:hover {
+  color: #fff;
+}
+.main-heading h2::after,
+.main-heading h2::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 11px solid var(--main-color);
+  border-radius: 50%;
+}
+
+.main-heading h2::before {
+  left: -50px;
+}
+.main-heading h2::after {
+  right: -50px;
+}
+
+.main-heading h2:hover::after,
+.main-heading h2:hover::before {
+  width: 51%;
+  height: 100%;
+  background-color: var(--main-color);
+  border: none;
+  border-radius: 0%;
+  z-index: -1;
+  transition: 0.5s;
+}
+.main-heading h2:hover::after {
+  right: 0;
+}
+.main-heading h2:hover::before {
+  left: 0;
+}

@@ -1,0 +1,49 @@
+.testmonials {
+  padding-top: var(--main-padding);
+  padding-bottom: var(--main-padding);
+  background-color: #eee;
+}
+
+.testmonials .container {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.testmonials .box {
+  background-color: #fff;
+  position: relative;
+  padding: 20px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+.testmonials .box .image {
+  position: absolute;
+  right: -10px;
+  top: -50px;
+  background-color: #eee;
+  border-radius: 100%;
+  overflow: hidden;
+}
+.testmonials .box .image img {
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  max-width: 100%;
+  border-radius: 100%;
+}
+.testmonials .box h3,
+.testmonials .box p,
+.testmonials .box ul {
+  padding: 0 0 10px 10px;
+  text-transform: capitalize;
+  letter-spacing: 1.3px;
+}
+.testmonials .box p {
+  color: #666;
+}
+.testmonials .box ul {
+  display: flex;
+}
+.testmonials .box ul li:not(:last-child) {
+  color: #ffc107;
+}

@@ -1,0 +1,56 @@
+.gallery {
+  padding-top: var(--main-padding);
+  padding-bottom: var(--main-padding);
+  background-color: var(--section-background);
+}
+
+.gallery .container {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
+  text-align: center;
+}
+.gallery .container > div {
+  position: relative;
+  overflow: hidden;
+  padding: 15px;
+  background-color: #fff;
+}
+.gallery .container > div::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(255 255 255 / 30%);
+  opacity: 0;
+}
+.gallery .container > div:hover::after {
+  animation: flashing 0.8s;
+}
+
+.gallery .container > div div {
+  overflow: hidden;
+  border-radius: 5px;
+}
+.gallery .container > div:hover img {
+  transform: scale(1.2) rotate(3deg);
+  transition: 0.3s;
+}
+
+.gallery .container img {
+  max-width: 100%;
+}
+
+@keyframes flashing {
+  0%,
+  40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    width: 120%;
+    height: 120%;
+  }
+}
